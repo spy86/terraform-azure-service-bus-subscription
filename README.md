@@ -48,5 +48,7 @@ No modules.
 
 ## Outputs
 
-No outputs.
+| Name | Description |
+|------|-------------|
+| <a name="output_id"></a> [id](#output\_id) | The ServiceBus Subscription ID. |
 <!-- END_TF_DOCS -->
