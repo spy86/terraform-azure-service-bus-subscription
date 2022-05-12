@@ -52,3 +52,35 @@ No modules.
 |------|-------------|
 | <a name="output_id"></a> [id](#output\_id) | The ServiceBus Subscription ID. |
 <!-- END_TF_DOCS -->
+
+## How to use
+
+```
+module "service-bus-subscription" {
+  source  = "spy86/service-bus-subscription/azure"
+  version = "1.0.1"
+  resource_group_name = "weu-test-rg"
+  servicebus_namespace_name = "dev-c803dd50-weu-sb-ns"
+  servicebus_topic_name = "topic01"
+  environment = "dev"
+  region = "weu"
+  resource_group_location = "West Europe"
+  servicebus_subscription_auto_delete_on_idle = "P10675199DT2H48M5.4775807S"
+  servicebus_subscription_dead_lettering_on_message_expiration = "true"
+  servicebus_subscription_default_message_ttl = "P10675199DT2H48M5.4775807S"
+  servicebus_subscription_enable_batched_operations = "false"
+  servicebus_subscription_forward_dead_lettered_messages_to = ""
+  servicebus_subscription_forward_to = ""
+  servicebus_subscription_lock_duration = "PT1M"
+  servicebus_subscription_max_delivery_count = "10"
+  servicebus_subscription_requires_session= "false"
+
+  default_tags = {
+      Administrator = "Someone"
+      Department = "IT"
+      CostCentre = "ABC123"
+      ContactPerson = "Someone@example.com"
+      ManagedByTerraform = "True"
+}
+}
+```
