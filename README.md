@@ -58,10 +58,11 @@ No modules.
 ```
 module "service-bus-subscription" {
   source  = "spy86/service-bus-subscription/azure"
-  version = "1.0.1"
+  version = "1.0.2"
   resource_group_name = "weu-test-rg"
   servicebus_namespace_name = "dev-c803dd50-weu-sb-ns"
   servicebus_topic_name = "topic01"
+  servicebus_subscription_name = "subscription01"
   environment = "dev"
   region = "weu"
   resource_group_location = "West Europe"

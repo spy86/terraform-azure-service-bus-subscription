@@ -38,7 +38,10 @@ variable "servicebus_namespace_name" {
   description = "Specifies the name of the ServiceBus Namespace resource . Changing this forces a new resource to be created."
   type = string
 }
-
+variable "servicebus_subscription_name" {
+  description = "Specifies the name of the ServiceBus Subscription resource. Changing this forces a new resource to be created."
+  type = string
+}
 variable "servicebus_subscription_lock_duration" {
   description = "The lock duration for the subscription as an ISO 8601 duration. The default value is 1 minute or P0DT0H1M0S . The maximum value is 5 minutes or P0DT0H5M0S ."
   type = string
